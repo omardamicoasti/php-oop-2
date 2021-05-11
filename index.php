@@ -25,6 +25,14 @@ class User {
     public function getDateCreation() {
         return $this->date_creation;
     }
+
+    // function checkSurname($_surname) {
+    //     if (strlen($_surname) < 2) {
+    //         throw new Exception("Surname must be at least 2 letters")
+    //     } else {
+    //         return $this->surname = $_surname;
+    //     }
+    // }
 }
 
 $omardamico = new User("omar@email.it", "omardamicoasti", "SecretPassword111");
