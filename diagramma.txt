@@ -1,0 +1,12 @@
+t_user
+
+username	varchar(20)	NOT NULL PRIMARY UNIQUE
+password	varchar(20)	NOT NULL
+email		varchar(50)	NOT NULL
+date_creation 	date
+profile_pic	varchar(50)	Default("default_user_logo.png")
+name		varchar(20)	NOT NULL
+surname		varchar(20)	NOT NULL
+bio		varchar(80)	NULL
+date_of_birth	date		NOT NULL
+
