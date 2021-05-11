@@ -1,6 +1,8 @@
 <?php
 
-class User {
+require("rights.php");
+
+class User extends Rights{
     private $username;
     private $password;
     private $email;
@@ -42,6 +44,8 @@ $omardamico->name = "omar";
 $omardamico->surname = "d'amico";
 $omardamico->bio = "hello everyone!";
 $omardamico->date_of_birth = "07/08/1989";
+$omardamico->rightsLevel= "normal user";
+// $paolodossetto->setAdminRights($surname); // provato ma così non funziona, vedi parte commentata in rights.php
 
 var_dump($omardamico);
 
@@ -49,8 +53,10 @@ $paolodossetto = new User("paolo@email.it", "paolodossetto", "SecretPassword222"
 $paolodossetto->setDateCreation();
 $paolodossetto->profile_pic = "best_profile_pic_paolo.png";
 $paolodossetto->name = "paolo";
-$paolodossetto->surname = "dossetto";
+$paolodossetto->surname = "dossetta";
 $paolodossetto->bio = "hey everyone!";
 $paolodossetto->date_of_birth = "06/05/1993";
+$paolodossetto->rightsLevel = "administrator";
+// $paolodossetto->setAdminRights($surname); // provato ma così non funziona, vedi parte commentata in rights.php
 
 var_dump($paolodossetto);
